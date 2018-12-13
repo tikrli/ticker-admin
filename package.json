@@ -61,7 +61,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "dist": "tar -C dist -c -z -f release.tar.gz ."
+    "dist": "tar -C dist -c -z -f release.tar.gz .",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
