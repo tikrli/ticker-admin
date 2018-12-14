@@ -60,7 +60,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "REACT_APP_API_URL=${REACT_APP_API_URL} webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "dist": "tar -C dist -c -z -f release.tar.gz .",
     "heroku-postbuild": "echo REACT_APP_API_URL=$REACT_APP_API_URL > .env && npm run build"
   },
