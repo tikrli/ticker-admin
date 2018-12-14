@@ -62,9 +62,9 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "REACT_APP_API_URL=${REACT_APP_API_URL} webpack --config webpack.prod.js",
     "dist": "tar -C dist -c -z -f release.tar.gz .",
-    "heroku-postbuild": " REACT_APP_API_URL=${REACT_APP_API_URL} npm run build"
+    "heroku-postbuild": "echo REACT_APP_API_URL=$REACT_APP_API_URL > .env && npm run build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app";
   }
 }
